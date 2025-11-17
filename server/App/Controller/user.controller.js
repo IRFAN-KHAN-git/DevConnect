@@ -1,7 +1,7 @@
 const userModel = require("../Model/model.user");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const BASE_URL = `http://localhost:${process.env.PORT || 3000}`
+const BASE_URL = process.env.BASE_URL || `http://localhost:${process.env.PORT || 3000}`;
 let userAuth = async (req, res) => {
   
 

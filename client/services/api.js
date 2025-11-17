@@ -1,5 +1,5 @@
 import axios from "axios";
-const API_URL ="http://localhost:8000/api"
+const API_URL = "https://devconnect-4a3j.onrender.com/api";
 
 console.log(API_URL)
 
