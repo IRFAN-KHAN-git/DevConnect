@@ -1,35 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+import React from 'react'
+import { BrowserRouter ,Route,Routes } from 'react-router-dom'
+import Layout from '../components/layout/Layout'
+import Home from '../pages/Home'
+import About from '../pages/About'
+import Blog from '../pages/Blog'
+import Discussions from '../components/Discussion/Discussions'
+import Post from '../components/Post/Post'
 
+import TermsOfService from '../TermAndCondition/TermsOfService'
+import PrivacyPolicy from '../TermAndCondition/PrivacyPolicy'
+import ComingSoon from '../pages/CommingSoon/ComingSoon'
+import Profile from '../components/Profile/Profile'
+
+
+
+
+ const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route path='/home' element={<Home/>}/>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/about' element={<About/>}/>
+          <Route path='/blog' element={<Blog/>}/>  
+          <Route path="/discussions" element={<Discussions/>} />
+          <Route path="/post/:id" element={<Post />} />
+          <Route path="/terms" element={<TermsOfService />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/coming-soon" element={<ComingSoon/>} />
+          <Route path="/profile/:userId" element={<Profile />} />
+        </Routes>
+      </Layout>
+          
+          
+          
+    </BrowserRouter>
   )
 }
-
-export default App
+export default App;

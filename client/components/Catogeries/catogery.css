@@ -1,0 +1,51 @@
+.catogeryDiv {
+  padding: 3rem;
+}
+.catogeryDiv h2 {
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 2rem;
+}
+
+/* catogeryCard */
+.catogeryCard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .catogeryCard {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.catogeryButton {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-radius: 0.5rem;
+  border: 1px solid #334155;
+  background-color: #1e293b;
+  padding: 1rem;
+  text-align: left;
+  color: #f1f5f9;
+  margin-bottom: 10px;
+}
+.catogeryButton:hover {
+  border-color: #3b82f6;
+  box-shadow: 0px 0px 8px #3b82f6;
+}
+
+.catogeryButton .icon {
+  background-color: #334155;
+  padding: 5px;
+  border-radius: 5px;
+  color: #3b82f6;
+}
+.catogeryButton .num {
+  color: #64748b;
+}
+.catogeryButton .nam {
+  color: #f1f5f9;
+  font-size: 14px;
+  font-weight: 500px;
+}
