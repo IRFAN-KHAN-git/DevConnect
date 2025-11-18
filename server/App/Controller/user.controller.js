@@ -108,7 +108,7 @@ let userLogin = async (req, res) => {
                 username: user.username,
                 email: user.email,
                 fullName: user.fullName,
-                avatar: `${BASE_URL}/uploads/${user.avatar}`,
+                 avatar: user.avatar,
         }
       })
 
